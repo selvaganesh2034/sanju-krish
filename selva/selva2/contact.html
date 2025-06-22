@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Audio</title>
+</head>
+<body>
+    <h2>Click to Play Music</h2>
+    <button onclick="playAudio()">Play</button>
+
+    <audio id="myAudio">
+        <source src="./music/audio2.mp3" type="audio/mpeg">
+        <source src="./music/audio2.ogg" type="audio/ogg">
+    </audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById("myAudio");
+            audio.play().catch(e => console.log("Play failed:", e));
+        }
+    </script>
+</body>
+</html>
